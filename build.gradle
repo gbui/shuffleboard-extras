@@ -1,0 +1,17 @@
+plugins {
+    id "java"
+    id "eclipse"
+    id "idea"
+}
+
+repositories {
+	mavenCentral()
+    maven {
+        url "http://first.wpi.edu/FRC/roborio/maven/release/"
+    }
+}
+
+dependencies {
+    implementation group: "edu.wpi.first.shuffleboard", name: "api", version: "1.1.1"
+    implementation group: "edu.wpi.first.shuffleboard.plugin", name: "base", version: "1.1.1"
+}

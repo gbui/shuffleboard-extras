@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<StackPane xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="com.team2073.shuffleboard.RadioButtonChooserWidget"
+           fx:id="root"
+           minWidth="64" minHeight="64">
+    <padding>
+        <Insets topRightBottomLeft="8"/>
+    </padding>
+    <VBox fx:id="vbox" spacing="8.0"/>
+</StackPane>
