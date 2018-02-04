@@ -18,12 +18,12 @@ import javafx.scene.layout.VBox;
 @ParametrizedController("RadioButtonChooserWidget.fxml")
 public class RadioButtonChooserWidget extends ComplexAnnotatedWidget<SendableChooserData> {
 
-	private final ToggleGroup group = new ToggleGroup();
-
 	@FXML
 	private Pane root;
 	@FXML
 	private VBox vbox;
+	@FXML
+	private ToggleGroup state;
 
 	@FXML
 	private void initialize() {
@@ -39,32 +39,30 @@ public class RadioButtonChooserWidget extends ComplexAnnotatedWidget<SendableCho
 				updateSelectedValue(newData.getSelectedOption());
 			}
 		});
-		group.selectedToggleProperty().addListener((__, oldToggle, newToggle) -> {
+		state.selectedToggleProperty().addListener((__, oldToggle, newToggle) -> {
 			RadioButton newButton = (RadioButton) newToggle;
-			if (newButton != null) {
-				setData(getData().withSelectedOption(newButton.getText()));
-			}
+			setData(getData().withSelectedOption(newButton != null ? newButton.getText() : ""));
 		});
 	}
 
 	private void updateOptions(String... options) {
-		group.getToggles().clear();
+		state.getToggles().clear();
 		vbox.getChildren().clear();
 		for (String option : options) {
 			RadioButton button = new RadioButton(option);
-			button.setToggleGroup(group);
+			button.setToggleGroup(state);
 			vbox.getChildren().add(button);
 		}
 	}
 
 	private void updateDefaultValue(String defaultValue) {
-		if (group.getSelectedToggle() == null) {
+		if (state.getSelectedToggle() == null) {
 			updateSelectedValue(defaultValue);
 		}
 	}
 
 	private void updateSelectedValue(String selectedValue) {
-		for (Toggle toggle : group.getToggles()) {
+		for (Toggle toggle : state.getToggles()) {
 			RadioButton button = (RadioButton) toggle;
 			if (button.getText().equals(selectedValue)) {
 				button.setSelected(true);

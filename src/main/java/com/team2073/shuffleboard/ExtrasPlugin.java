@@ -21,7 +21,8 @@ public class ExtrasPlugin extends Plugin {
 	public List<ComponentType> getComponents() {
 		return Arrays.asList(
 			WidgetType.forAnnotatedWidget(NoneditableTextViewWidget.class),
-			WidgetType.forAnnotatedWidget(RadioButtonChooserWidget.class)
+			WidgetType.forAnnotatedWidget(RadioButtonChooserWidget.class),
+			WidgetType.forAnnotatedWidget(CheckBoxWidget.class)
 		);
 	}
 }
