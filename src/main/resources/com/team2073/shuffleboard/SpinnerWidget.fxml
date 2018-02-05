@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.SpinnerValueFactory?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.team2073.shuffleboard.SpinnerWidget"
+            minWidth="64" minHeight="64"
+            fx:id="root">
+    <center>
+        <StackPane>
+            <padding>
+                <Insets topRightBottomLeft="8"/>
+            </padding>
+            <Spinner fx:id="spinner"/>
+        </StackPane>
+    </center>
+</BorderPane>

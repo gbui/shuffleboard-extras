@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.control.TextArea?>
+
+<StackPane xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="com.team2073.shuffleboard.TextAreaWidget"
+           fx:id="root"
+           minWidth="32" minHeight="32"
+           prefHeight="128" prefWidth="128">
+    <padding>
+        <Insets  topRightBottomLeft="8"/>
+    </padding>
+	<TextArea fx:id="textArea" maxHeight="Infinity" maxWidth="Infinity"/>
+</StackPane>

@@ -20,6 +20,8 @@ public class ExtrasPlugin extends Plugin {
 	@Override
 	public List<ComponentType> getComponents() {
 		return Arrays.asList(
+			WidgetType.forAnnotatedWidget(TextAreaWidget.class),
+			WidgetType.forAnnotatedWidget(SpinnerWidget.class),
 			WidgetType.forAnnotatedWidget(NoneditableTextViewWidget.class),
 			WidgetType.forAnnotatedWidget(RadioButtonChooserWidget.class),
 			WidgetType.forAnnotatedWidget(CheckBoxWidget.class)
