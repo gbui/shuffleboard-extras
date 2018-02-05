@@ -15,3 +15,11 @@ dependencies {
     implementation group: "edu.wpi.first.shuffleboard", name: "api", version: "1.1.1"
     implementation group: "edu.wpi.first.shuffleboard.plugin", name: "base", version: "1.1.1"
 }
+
+task installPlugin(type: Copy) {
+    dependsOn build
+    group = "shuffleboard"
+    description = "Assembles the plugin jar and copies it to the Shuffleboard plugins directory."
+    from "build/libs"
+    into "${System.properties['user.home']}/Shuffleboard/plugins"
+}
