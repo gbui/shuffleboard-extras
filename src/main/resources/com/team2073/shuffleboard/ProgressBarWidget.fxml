@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.StackPane?>
+<?import edu.wpi.first.shuffleboard.api.components.LinearIndicator?>
+<?import edu.wpi.first.shuffleboard.api.util.UnitStringConverter?>
+<?import javafx.scene.control.Label?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ProgressBar?>
+<StackPane xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="com.team2073.shuffleboard.ProgressBarWidget"
+           minWidth="120" minHeight="32"
+           fx:id="root">
+    <padding>
+        <Insets topRightBottomLeft="8"/>
+    </padding>
+    <ProgressBar fx:id="progressBar" StackPane.alignment="CENTER"/>
+    <Label fx:id="label" visible="${controller.showText}" styleClass="linear-indicator-text" StackPane.alignment="CENTER"/>
+</StackPane>

@@ -20,6 +20,7 @@ public class ExtrasPlugin extends Plugin {
 	@Override
 	public List<ComponentType> getComponents() {
 		return Arrays.asList(
+			WidgetType.forAnnotatedWidget(ProgressBarWidget.class),
 			WidgetType.forAnnotatedWidget(TextAreaWidget.class),
 			WidgetType.forAnnotatedWidget(SpinnerWidget.class),
 			WidgetType.forAnnotatedWidget(NoneditableTextViewWidget.class),
